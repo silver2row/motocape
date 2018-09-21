@@ -2,6 +2,12 @@
 
 Some ideas for the MotorCape from GHI and BBB.io persons...
 
+http://beagleboard.org/black-wireless, http://octavosystems.com/octavo_products/osd335x/, and https://www.mouser.com/ProductDetail/GHI-Electronics/MRTCPE-BBBCAPE?qs=lYGu3FyN48fyjZuUoploBg%3d%3d
+will show some ideas on the BBBW, which I am using, the SiP on the BBBW, and the MotorCape which can be purchased from Mouser.com.
+
+Just to mention ideas, please read this page: https://beagleboard.org/logo. This will give you some ideas on their Logo, the dog which name evades me now, the license for their open source
+attitudes and beliefs, and how to prepare specific ideas if dealing w/ them. Anyway, enough of policy. Here goes it!
+
 ...
 
 First off...attach that MotorCape. Make sure, if you are using the Cape w/ a BBBW, to get P8 on the Cape w/ P8 on the BBBW and the same for header P9. 

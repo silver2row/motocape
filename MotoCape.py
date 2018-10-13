@@ -26,7 +26,7 @@ app = Flask(__name__)
 def updates(state=None):
 
     if state == "F":
-        print "Geaux Forward"
+        print ("Geaux Forward")
         PWM.start(dirOne, 100)
         PWM.start(dirThree, 100)
         GPIO.output("P8_18", GPIO.HIGH)
@@ -34,7 +34,7 @@ def updates(state=None):
         time.sleep(.2)
 
     if state == "R":
-        print "Geaux Right"
+        print ("Geaux Right")
         PWM.start(dirOne, 100)
         PWM.start(dirThree, 0)
         GPIO.output("P8_18", GPIO.HIGH)
@@ -42,7 +42,7 @@ def updates(state=None):
         time.sleep(.2)
 
     if state == "L":
-        print "Geaux Left"
+        print ("Geaux Left")
         PWM.start(dirOne, 0)
         PWM.start(dirThree, 75) 
         GPIO.output("P8_18", GPIO.LOW)
@@ -50,25 +50,25 @@ def updates(state=None):
         time.sleep(.2)
 
     if state == "S":
-        print "Stop!"
+        print ("Stop!")
         PWM.start(dirOne, 0)
         PWM.start(dirThree, 0)
         GPIO.output("P8_18", GPIO.LOW)
         GPIO.output("P8_14", GPIO.LOW)
         time.sleep(.2)
 
-    if state == "REV":
-        print "Reverse!"
-        PWM.start(dirOne, -75)
-        PWM.start(dirOne, -75)
-        GPIO.output("P8_18", GPIO.HIGH)
-        GPIO.output("P8_14", GPIO.HIGH)
-        time.sleep(.2)
+    #if state == "REV":
+        #print ("Reverse!")
+        #PWM.start(dirOne, -75)
+        #PWM.start(dirOne, -75)
+        #GPIO.output("P8_18", GPIO.HIGH)
+        #GPIO.output("P8_14", GPIO.HIGH)
+        #time.sleep(.2)
 
     template_data = {
         "title" : state,
     }
-    return render_template("boboJackson.html", **template_data)
+    return render_template("bobo.html", **template_data)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)

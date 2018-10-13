@@ -52,4 +52,5 @@ I installed w/ pip, Adafruit_BBIO like so: sudo pip install Adafruit_BBIO. Under
 
 Seth
 
-P.S. I think this is all for now! Oh and I reviewed this info. from a book. I will be posting the exact book later...enjoy!
+P.S. I think this is all for now! Oh and I reviewed this info. from a book w/ my changes. Here is the book and page number in case you are wondering, "BeagleBone By Example," (Prabakar).
+Page 235 of the book is where I got some ideas and reinvented the idea on his subjects. If you need additional info, please do not hesitate to ask.

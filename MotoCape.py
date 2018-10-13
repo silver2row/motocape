@@ -18,6 +18,8 @@ GPIO.output("P8_14", GPIO.LOW)
 
 dirOne = "P9_16"
 dirThree = "P8_13"
+dirOneBack = "P9_16"
+dirThreeBack = "P8_13"
 
 app = Flask(__name__)
 @app.route("/")
@@ -59,8 +61,8 @@ def updates(state=None):
 
     if state == "REV":
         print ("Reverse!")
-        PWM.start(dirOne, -75)
-        PWM.start(dirOne, -75)
+        PWM.start(dirOneBack, 1)
+        PWM.start(dirThreeBack, 1)
         GPIO.output("P8_18", GPIO.HIGH)
         GPIO.output("P8_14", GPIO.HIGH)
         time.sleep(.2)

@@ -35,7 +35,7 @@ this site to be the online page w/ the most info: https://www.freedesktop.org/wi
 
 # Making stuff move around...
 
-You can look to MotoCape.py and boboJackson.html in the templates directory for a quick software example. As you can tell, I am using motorOne and motorThree only. 
+You can look to MotoCape.py and bobo.html in the templates directory for a quick software example. As you can tell, I am using motorOne and motorThree only. 
 Please keep in mind that when applying power to the MotorCape, the motors will only move if the BBB, BBG, BBGW, BBBW are plugged in via barrel jack (vdd_5v).
 
 You can still use the USB (sys_5v) connection to debug and create software for your Cape on your BBB/variation.
@@ -52,4 +52,4 @@ I installed w/ pip, Adafruit_BBIO like so: sudo pip install Adafruit_BBIO. Under
 
 Seth
 
-P.S. I think this is all for now!
+P.S. I think this is all for now! Oh and I reviewed this info. from a book. I will be posting the exact book later...enjoy!

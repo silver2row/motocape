@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 from flask import Flask, render_template
 import Adafruit_BBIO.GPIO as GPIO
@@ -57,13 +57,13 @@ def updates(state=None):
         GPIO.output("P8_14", GPIO.LOW)
         time.sleep(.2)
 
-    #if state == "REV":
-        #print ("Reverse!")
-        #PWM.start(dirOne, -75)
-        #PWM.start(dirOne, -75)
-        #GPIO.output("P8_18", GPIO.HIGH)
-        #GPIO.output("P8_14", GPIO.HIGH)
-        #time.sleep(.2)
+    if state == "REV":
+        print ("Reverse!")
+        PWM.start(dirOne, -75)
+        PWM.start(dirOne, -75)
+        GPIO.output("P8_18", GPIO.HIGH)
+        GPIO.output("P8_14", GPIO.HIGH)
+        time.sleep(.2)
 
     template_data = {
         "title" : state,

@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 
 from flask import Flask, render_template
 import Adafruit_BBIO.GPIO as GPIO
@@ -18,8 +18,6 @@ GPIO.output("P8_14", GPIO.LOW)
 
 dirOne = "P9_16"
 dirThree = "P8_13"
-dirOneBack = "P9_16"
-dirThreeBack = "P8_13"
 
 app = Flask(__name__)
 @app.route("/")
@@ -28,44 +26,34 @@ app = Flask(__name__)
 def updates(state=None):
 
     if state == "F":
-        print ("Geaux Forward")
         PWM.start(dirOne, 100)
         PWM.start(dirThree, 100)
         GPIO.output("P8_18", GPIO.HIGH)
         GPIO.output("P8_14", GPIO.HIGH)
-        time.sleep(.2)
 
     if state == "R":
-        print ("Geaux Right")
-        PWM.start(dirOne, 100)
+        PWM.start(dirOne, 75)
         PWM.start(dirThree, 0)
         GPIO.output("P8_18", GPIO.HIGH)
         GPIO.output("P8_14", GPIO.LOW)
-        time.sleep(.2)
 
     if state == "L":
-        print ("Geaux Left")
         PWM.start(dirOne, 0)
-        PWM.start(dirThree, 75) 
+        PWM.start(dirThree, 75)
         GPIO.output("P8_18", GPIO.LOW)
         GPIO.output("P8_14", GPIO.HIGH)
-        time.sleep(.2)
 
     if state == "S":
-        print ("Stop!")
         PWM.start(dirOne, 0)
         PWM.start(dirThree, 0)
         GPIO.output("P8_18", GPIO.LOW)
         GPIO.output("P8_14", GPIO.LOW)
-        time.sleep(.2)
 
-    if state == "REV":
-        print ("Reverse!")
-        PWM.start(dirOneBack, 1)
-        PWM.start(dirThreeBack, 1)
-        GPIO.output("P8_18", GPIO.HIGH)
-        GPIO.output("P8_14", GPIO.HIGH)
-        time.sleep(.2)
+    #if state == "REV":
+        #PWM.start(dirOne, 80, 1)
+        #PWM.start(dirThree, 80, 1)
+        #GPIO.output("P8_18", GPIO.HIGH)
+        #GPIO.output("P8_14", GPIO.HIGH)
 
     template_data = {
         "title" : state,

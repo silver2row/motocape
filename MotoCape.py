@@ -17,7 +17,7 @@ GPIO.output("P8_26", GPIO.LOW)
 
 
 dirOne = "P9_16"
-dirFour = "P8_13"
+dirFour = "P8_19"
 
 app = Flask(__name__)
 @app.route("/")
@@ -55,17 +55,17 @@ def updates(state=None):
         GPIO.output("P8_18", GPIO.HIGH)
         GPIO.output("P8_26", GPIO.HIGH)
 
-    if state == "REV_R":
-        PWM.start(dirOne, 75, 2000, 1)
-        PWM.start(dirFour, 0, 2000, 1)
-        GPIO.output("P8_18", GPIO.HIGH)
-        GPIO.output("P8_26", GPIO.LOW)
-
     if state == "REV_L":
         PWM.start(dirOne, 0, 2000, 1)
         PWM.start(dirFour, 75, 2000, 1)
         GPIO.output("P8_18", GPIO.LOW)
         GPIO.output("P8_26", GPIO.HIGH)
+
+    if state == "REV_R":
+        PWM.start(dirOne, 75, 2000, 1)
+        PWM.start(dirFour, 0, 2000, 1)
+        GPIO.output("P8_18", GPIO.HIGH)
+        GPIO.output("P8_26", GPIO.LOW)
 
     template_data = {
         "title" : state,

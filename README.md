@@ -39,6 +39,7 @@ You can look to MotoCape.py and bobo.html in the templates directory for a quick
 Please keep in mind that when applying power to the MotorCape, the motors will only move if the BBB, BBG, BBGW, BBBW are plugged in via barrel jack (vdd_5v).
 
 You can still use the USB (sys_5v) connection to debug and create software for your Cape on your BBB/variation.
+
 ...
 
 You can set up Adafruit_BBIO by following this site on this site: https://github.com/adafruit/adafruit-beaglebone-io-python. Setting up PWM and GPIO on the BBBW, in my case, was close to simple. 
@@ -50,8 +51,10 @@ I installed w/ pip, Adafruit_BBIO like so: sudo pip install Adafruit_BBIO. Under
 
     If you need rations or supplies of help, ask away. I should be knowledgeable by that point in time. 
 
+...
+
     I added a new bunch of software I got from adding, making additions, and reading. 
-    Some are from www.w3schools.com, a book I already mentioned, and a person from 
+    Some are from www.w3schools.com, a book I will mention, and a person from 
     Freenode at #beagle!
 
 Seth

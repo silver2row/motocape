@@ -50,7 +50,9 @@ I installed w/ pip, Adafruit_BBIO like so: sudo pip install Adafruit_BBIO. Under
 
     If you need rations or supplies of help, ask away. I should be knowledgeable by that point in time. 
 
-    I added a new bunch of software I got from adding, making additions, and reading. Some are from www.w3schools.com, a book I already mentioned, and a person from Freenode at #beagle!
+    I added a new bunch of software I got from adding, making additions, and reading. 
+    Some are from www.w3schools.com, a book I already mentioned, and a person from 
+    Freenode at #beagle!
 
 Seth
 

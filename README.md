@@ -29,13 +29,13 @@ The best way to add content to the Description= line is to make your description
 
 In the [Service] section after ExecStart=, the PATH to your file, whatever type of file it may be at this point, should start w/ your working directory and end w/ the file being run on boot.
 
-On the [Install] section after WantedBy=, type multi-user.target. This is a cop out but is should work no matter what. There are many recommendations on what to read and where to read it. I have found
+On the [Install] section after WantedBy=, type multi-user.target. There are many recommendations on what to read and where to read it. I have found
 this site to be the online page w/ the most info: https://www.freedesktop.org/wiki/Software/systemd/. I know MAN pages rule, too. 
 ...
 
 # Making stuff move around...
 
-You can look to MotoCape.py and bobo.html in the templates directory for a quick software example. As you can tell, I am using motorOne and motorThree only. 
+You can look to MotoCape.py and bobo.html in the templates directory for a quick software example. As you can tell, I am using motorOne and motorFour only. 
 Please keep in mind that when applying power to the MotorCape, the motors will only move if the BBB, BBG, BBGW, BBBW are plugged in via barrel jack (vdd_5v).
 
 You can still use the USB (sys_5v) connection to debug and create software for your Cape on your BBB/variation.
@@ -59,5 +59,5 @@ I installed w/ pip, Adafruit_BBIO like so: sudo pip install Adafruit_BBIO. Under
 
 Seth
 
-P.S. I think this is all for now! Oh and I reviewed this info. from a book w/ my changes. Here is the book and page number in case you are wondering, "BeagleBone By Example," (Prabakar).
+P.S. I think this is all for now! Oh and I reviewed this info. from a book w/ my changes. Here is the book and page number in case you are wondering, "BeagleBone By Example," (Prabakar 2016).
 Page 235 of the book is where I got some ideas and reinvented the idea on his subjects. If you need additional info, please do not hesitate to ask.

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# w/ help from #beagle on Freenode
+# w/ help from #beagle on Freenode, i.e. 2018
 
 from flask import Flask, render_template
 import Adafruit_BBIO.GPIO as GPIO
@@ -70,4 +70,4 @@ def updates(state=None):
     return render_template("boboIII.html", **template_data)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000) # debug=True

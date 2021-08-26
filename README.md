@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/silver2row/motocape/badge/master)](https://www.codefactor.io/repository/github/silver2row/motocape/overview/master)
+
 # MotorCape from GHI and BeagleBoard.org
 
 Some ideas for the MotorCape from GHI and BBB.io persons...

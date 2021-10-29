@@ -55,3 +55,7 @@ I installed w/ pip, ` Adafruit_BBIO ` like so: ` sudo pip install Adafruit_BBIO 
     Freenode at #beagle!
 
 Seth
+
+P.S. If this does not work, it is b/c of the release of Adafruit_BBIO not being developed any longer from what I understand.
+
+    I could be wrong but for now, I do not know anyone developing it...

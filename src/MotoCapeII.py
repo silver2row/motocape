@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# w/ help from #beagle on Freenode, i.e. 2018
+# w/ help from #beagle on IRC, circa 2018...
 
 from flask import Flask, render_template
 import Adafruit_BBIO.GPIO as GPIO

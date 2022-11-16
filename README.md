@@ -4,10 +4,10 @@
 
     ...
 
-First off...attach that MotorCape. Make sure, if you are using the Cape w/ a BBBW, to get P8 on the Cape w/ P8 on the BBBW
+Make sure, if you are using the Cape w/ a BBBW, to get P8 on the Cape w/ P8 on the BBBW
 and the same for header P9 ` (of course) `. 
 
-Okay, once attached is when we can start development. We will need to make service by way of a .service file, a couple 
+Okay, once attached is when we can start development. We will need to make a service by way of a .service file, a couple 
 of software examples, and use systemctl to make our service run on boot.
 For the service file, go to /etc/systemd/system. Make a .service file by using your favorite editor, nano for instance, and use
 this idea for a .py file named MotoCape.py:
@@ -16,7 +16,7 @@ this idea for a .py file named MotoCape.py:
     Description=Whatever You Would Like to Describe about Your File
 
     [Service]
-    ExecStart=/The/Path/To/Your/File.py
+    ExecStart=/The/Path/To/Your/MotoCape.py
 
     [Install]
     WantedBy=multi-user.target
@@ -46,13 +46,17 @@ You can still use the USB connection to debug and create software for your Cape 
 
 You can set up Adafruit_BBIO by following this site on this site: https://github.com/adafruit/adafruit-beaglebone-io-python.
 Setting up PWM and GPIO on the BBBW, in my case, was close to simple. 
-I installed w/ pip, ` Adafruit_BBIO ` like so: ` sudo pip install Adafruit_BBIO ` .
+I installed w/ pip, ` Adafruit_BBIO ` like so: ` python3 -m pip install Adafruit_BBIO ` .
+
+... Nov. 2022 ...
+
+` You may not be able to use Adafruit_BBIO any longer, i.e. as it is not being developed any longer... `
 
 # GO!
 
-    I added a new bunch of software I got from adding, making additions, and reading. 
+    I got source from adding, making additions, and reading. 
     Some are from www.w3schools.com, a book I will mention, and a person from 
-    Freenode at #beagle!
+    IRC at #beagle!
 
 Seth
 

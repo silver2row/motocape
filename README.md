@@ -1,11 +1,10 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/silver2row/motocape/badge/master)](https://www.codefactor.io/repository/github/silver2row/motocape/overview/master)
 
+# This source is a new WIP b/c Adafruit_BBIO is no longer being developed or maintained?
+
 # MotorCape from GHI and BeagleBoard.org
 
     ...
-
-Make sure, if you are using the Cape w/ a BBBW, to get P8 on the Cape w/ P8 on the BBBW
-and the same for header P9 ` (of course) `. 
 
 Okay, once attached is when we can start development. We will need to make a service by way of a .service file, a couple 
 of software examples, and use systemctl to make our service run on boot.
@@ -36,30 +35,19 @@ I have found this site to be the online page w/ the most info: ` https://www.fre
 # Making stuff move around...
 
 You can look to MotoCape.py and bobo.html in the templates directory for a quick software example. As you can tell, I am
-using motorOne and motorFour only. 
+using motorOne and motorFour only.
+
 Please keep in mind that when applying power to the MotorCape, the motors will only move if the BBB, BBGG, or BBBW are plugged
 in via barrel jack.
 
 You can still use the USB connection to debug and create software for your Cape on your BBB/variation.
 
-...
-
-You can set up Adafruit_BBIO by following this site on this site: https://github.com/adafruit/adafruit-beaglebone-io-python.
-Setting up PWM and GPIO on the BBBW, in my case, was close to simple. 
-I installed w/ pip, ` Adafruit_BBIO ` like so: ` python3 -m pip install Adafruit_BBIO ` .
-
-... Nov. 2022 ...
+... Dec. 22, 2022 ...
 
 ` You may not be able to use Adafruit_BBIO any longer, i.e. as it is not being developed any longer... `
 
 # GO!
 
     I got source from adding, making additions, and reading. 
-    Some are from www.w3schools.com, a book I will mention, and a person from 
+    Some are from www.w3schools.com, a book I will mention (https://hub.packtpub.com/getting-started-beaglebone/), and a person from 
     IRC at #beagle!
-
-Seth
-
-P.S. If this does not work, it is b/c of the release of Adafruit_BBIO not being developed any longer from what I understand.
-
-    I could be wrong but for now, I do not know anyone developing it...

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC Motor AJAX Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            margin-top: 50px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .status-box {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #e2e8f0;
+            border-radius: 5px;
+        }
+        button {
+            font-size: 1em;
+            padding: 12px 24px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .btn-forward { background-color: #4CAF50; color: white; }
+        .btn-reverse { background-color: #2196F3; color: white; }
+        .btn-brake { background-color: #f44336; color: white; }
+        .btn-coast { background-color: #9e9e9e; color: white; }
+        button:hover { opacity: 0.85; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🛸 Async Actuator Control Panel</h1>
+    
+    <!-- Updates automatically without page refresh -->
+    <div class="status-box">
+        Current State: <span id="motor-status">{{ status }}</span>
+    </div>
+
+    <!-- Plain Interactive Buttons -->
+    <button onclick="sendAction('forward')" class="btn-forward">Forward</button>
+    <button onclick="sendAction('reverse')" class="btn-reverse">Reverse</button>
+    <br><br>
+    <button onclick="sendAction('brake')" class="btn-brake">Hard Brake</button>
+    <button onclick="sendAction('stop')" class="btn-coast">Coast Free</button>
+</div>
+
+<script>
+function sendAction(actionValue) {
+    // Fire background HTTP POST request payload
+    fetch('/control', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ action: actionValue })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network hardware connection dropped');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Swap out the UI text element content fluidly
+        document.getElementById('motor-status').textContent = data.status;
+    })
+    .catch(error => {
+        console.error('Error executing motor instruction:', error);
+        document.getElementById('motor-status').textContent = "omm Error";
+    });
+}
+</script>
+
+</body>
+</html>

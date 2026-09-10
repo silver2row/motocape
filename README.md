@@ -2,7 +2,7 @@
 
 # This source is a "new" WIP.
 
-# MotorCape from GHI and BeagleBoard.org!
+# Motor Cape from GHI and BeagleBoard.org!
 
 Okay, once attached is when we can start development. We will need to make a service by way of a .service file, a couple 
 of software examples, and use systemctl to make our service run on boot.
@@ -34,6 +34,8 @@ I have found this site to be the online page w/ the most info: ` https://www.fre
 
 Please keep in mind that when applying power to the MotorCape, the motors will only move if the BBB, BBGG, or BBBW are plugged
 in via barrel jack.
+
+Although I am testing with a new board from beagleboard.org (BeagleY-AI), you can use this source code and attached files with the BBB and/or am335x style of SBC.
 
 ... 09/2026 ...
 

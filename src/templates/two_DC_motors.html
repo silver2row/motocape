@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Motor Control Panel</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f4f4f9; }
+        .container { display: flex; justify-content: center; gap: 40px; }
+        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 200px; }
+        h2 { color: #333; }
+        button { display: block; width: 100%; margin: 10px 0; padding: 12px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; color: white; transition: background 0.2s; }
+        .btn-forward { background-color: #28a745; }
+        .btn-forward:hover { background-color: #218838; }
+        .btn-backward { background-color: #ffc107; color: black; }
+        .btn-backward:hover { background-color: #e0a800; }
+        .btn-stop { background-color: #dc3545; }
+        .btn-stop:hover { background-color: #bd2130; }
+    </style>
+</head>
+<body>
+
+    <h1>Dual Motor Control Panel</h1>
+    
+    <div class="container">
+        <!-- Motor A Controls -->
+        <div class="card">
+            <h2>Motor A</h2>
+            <form action="/control" method="post">
+                <input type="hidden" name="motor" value="A">
+                <button type="submit" name="action" value="forward" class="btn-forward">Forward</button>
+                <button type="submit" name="action" value="backward" class="btn-backward">Backward</button>
+                <button type="submit" name="action" value="stop" class="btn-stop">Stop</button>
+            </form>
+        </div>
+
+        <!-- Motor B Controls -->
+        <div class="card">
+            <h2>Motor B</h2>
+            <form action="/control" method="post">
+                <input type="hidden" name="motor" value="B">
+                <button type="submit" name="action" value="forward" class="btn-forward">Forward</button>
+                <button type="submit" name="action" value="backward" class="btn-backward">Backward</button>
+                <button type="submit" name="action" value="stop" class="btn-stop">Stop</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

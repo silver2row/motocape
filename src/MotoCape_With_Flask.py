@@ -62,11 +62,11 @@ import atexit
 @atexit.register
 def cleanup():
     print("\nShutting down web server. Freeing GPIO hardware locks...")
-    gpio_request.set_value(MOTOR_IN1, Value.INACTIVE)
-    gpio_request.set_value(MOTOR_IN2, Value.INACTIVE)
-    gpio_request.close()
+    gpio_request.set_value(MOTOR_IN1, Value.INACTIVE) # Still needed in gpiod v2?
+    gpio_request.set_value(MOTOR_IN2, Value.INACTIVE) # Maybe needed because of Flask?
+#    gpio_request.close()
 
 if __name__ == '__main__':
     # Run the app. Debug=False is highly recommended when driving hardware 
-    # because Flask's auto-reloader can duplicate background hardware calls.
+    # because Flask's auto-reloader can duplicate background hardware calls!
     app.run(host='0.0.0.0', port=5000, debug=False)

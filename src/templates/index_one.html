@@ -47,7 +47,7 @@
 <body>
 
 <div class="container">
-    <h1>🛸 Async Actuator Control Panel</h1>
+    <h1>Async Actuator Control Panel</h1>
     
     <!-- Updates automatically without page refresh -->
     <div class="status-box">
@@ -84,7 +84,7 @@ function sendAction(actionValue) {
     })
     .catch(error => {
         console.error('Error executing motor instruction:', error);
-        document.getElementById('motor-status').textContent = "omm Error";
+        document.getElementById('motor-status').textContent = "Communication Error";
     });
 }
 </script>

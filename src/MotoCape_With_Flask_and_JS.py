@@ -66,7 +66,7 @@ def cleanup():
     print("\nShutting down web server. Freeing GPIO hardware locks...")
     gpio_request.set_value(MOTOR_IN1, Value.INACTIVE)
     gpio_request.set_value(MOTOR_IN2, Value.INACTIVE)
-    gpio_request.close()
+#    gpio_request.close() # cannot be called/does nothing...
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=False)
